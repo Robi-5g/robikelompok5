@@ -1,0 +1,282 @@
+body {
+    font-family: "Lexend Exa", sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    padding: 0 30px;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+button,
+input {
+    border: 0;
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+}
+
+.sign-up {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    background: rgba(247, 247, 249, 0.8);
+    backdrop-filter: blur(50px);
+}
+
+.sign-up > h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0 0 6px;
+    color: rgb(255, 251, 254 / 96%);
+}
+
+.sign-up > h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 30px;
+    color: rgb(255, 251, 254 / 40%);
+}
+
+.form {
+    margin: 0;
+    display: grid;
+    gap: 18px;
+}
+
+.textbox {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.textbox span {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    left: 0;
+    font-size: 22px;
+    pointer-events: none;
+    color: rgb(255, 251, 254 / 40%);
+} 
+
+.textbox input {
+    padding: 0 24px 0 36px;
+    border-bottom: 2px solid rgb(255, 255, 255 / 5%);
+    color: rgb(255, 251, 254 / 96%);
+    height: 72px;
+    transition: 0.8s;
+}
+
+:is(input:focus, input:valid) ~ label {
+    translate: -40px -40px;
+    scale: 0.875;
+}
+
+input:focus ~ label {
+    color: rgb(255, 255, 255 / 40%);
+}
+
+input:focus {
+  border-color: rgb(255 255 255 / 76%);
+}
+
+:is(input:focus, input:valid) ~ span {
+    color: rgb(255 255 255 / 76%);
+}
+
+.textbox label {
+    position: absolute;
+    top: 50%;
+    left: 36px;
+    translate: 0 -50%;
+    color: rgb(255, 255, 255 / 40%);
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.form button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 24px;
+    border-radius: 6px;
+    background: rgb(0 0 0 / 13%);
+    color: #583c87;
+    border: 0;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.sign-up p {
+  margin: 0 0 22px;
+  color: inherit);
+}
+
+.sign-up p > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** KEYFRAME UNTUK ANIMASI BACKGROUND 3D **/
+@keyframes move {
+    100% {
+        transform: translate3d(0,0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgb(237, 255, 236 / 76%);
+    overflow: hidden;
+}
+
+.background span {
+    width: 38vmin;
+    height: 38vmin;
+    border-radius: 38vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 105;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.background span:nth-child(0)
+{
+    color: #003049;
+    top: 57%;
+    left: 23%;
+    animation-duration: 10s;
+    animation-delay: -31s;
+    transform-origin: -20vw -15vh;
+      box-shadow: -76vmin 0 10.414138892314494vmin currentColor;
+}
+
+.background span:nth-child(1)
+{
+    color: #dc81ee;
+    top: 51%;
+    left: 66%;
+    animation-duration: 28s;
+    animation-delay: -32s;
+    transform-origin: -13vw -12vh;
+    box-shadow: 76vmin 0 10.421136806952989vmin currentColor;
+}
+
+.background span:nth-child(3){
+    color: #5de5c9;
+    top: 76%;
+    left: 40%;
+    animation-duration: 13s;
+    animation-delay: -32s;
+    transform-origin: -17vw -1vh;
+    box-shadow: 76vmin 0 9.76941503334886vmin currentColor;
+}
+.background span:nth-child(4)
+{
+    color: #583c87;
+    top: 92%;
+    left: 66%;
+    animation-duration: 45s;
+    animation-delay: -28s;
+    transform-origin: -15vw -14vh;
+    box-shadow: 76vmin 0 9.76941503334886vmin currentColor;
+}
+
+.background span:nth-child(5)
+{
+    color: #dc81ee;
+    top: 95%;
+    left: 45%;
+    animation-duration: 24s;
+    animation-delay: -19s;
+    transform-origin: -9vw -15vh;
+    box-shadow: 76vmin 0 9.76941503334886vmin currentColor;
+
+}
+
+.background span:nth-child(6)
+{
+    color: #dc81ee;
+    top: 95%;
+    left: 45%;
+    animation-duration: 24s;
+    animation-delay: -19s;
+    transform-origin: -9vw -15vh;
+    box-shadow: 76vmin 0 9.76941503334886vmin currentColor;
+
+}.background span:nth-child(7)
+{
+    color: #dc81ee;
+    top: 95%;
+    left: 45%;
+    animation-duration: 24s;
+    animation-delay: -19s;
+    transform-origin: -9vw -15vh;
+    box-shadow: 76vmin 0 9.76941503334886vmin currentColor;
+
+}.background span:nth-child(8)
+{
+    color: #dc81ee;
+    top: 95%;
+    left: 45%;
+    animation-duration: 24s;
+    animation-delay: -19s;
+    transform-origin: -9vw -15vh;
+    box-shadow: 76vmin 0 9.76941503334886vmin currentColor;
+
+}.background span:nth-child(9)
+{
+    color: #dc81ee;
+    top: 95%;
+    left: 45%;
+    animation-duration: 24s;
+    animation-delay: -19s;
+    transform-origin: -9vw -15vh;
+    box-shadow: 76vmin 0 9.76941503334886vmin currentColor;
+
+}.background span:nth-child(10)
+{
+    color: #dc81ee;
+    top: 95%;
+    left: 45%;
+    animation-duration: 24s;
+    animation-delay: -19s;
+    transform-origin: -9vw -15vh;
+    box-shadow: 76vmin 0 9.76941503334886vmin currentColor;
+
+}
